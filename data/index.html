@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estacionamento UNIFEOB</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo-container">
+            <span class="material-icons">directions_car</span>
+            <div class="logo-text">
+                <strong>ESTACIONAMENTO</strong><br>UNIFEOB
+            </div>
+        </div>
+        
+        <div class="user-info">
+            <div class="avatar"></div>
+            <div class="user-details">
+                <span class="user-name">Olá, Guilherme!</span>
+                <span class="datetime" id="relogio">Data/Hora: --:--</span>
+            </div>
+        </div>
+
+        <nav class="menu">
+            <a href="#" class="menu-item active"><span class="material-icons">dashboard</span> Dashboard</a>
+            <a href="#" class="menu-item"><span class="material-icons">bar_chart</span> Relatórios</a>
+            <a href="#" class="menu-item"><span class="material-icons">settings</span> Configurações</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        
+        <h2>RESUMO</h2>
+        <div class="resumo-cards">
+            <div class="card">
+                <span class="material-icons icon-blue">analytics</span>
+                <div class="card-info">
+                    <span class="card-title">Vagas Totais:</span>
+                    <strong class="card-value" id="total-vagas">45</strong>
+                </div>
+            </div>
+            <div class="card">
+                <span class="material-icons icon-red">directions_car</span>
+                <div class="card-info">
+                    <span class="card-title">Vagas Ocupadas:</span>
+                    <strong class="card-value" id="vagas-ocupadas">0</strong>
+                </div>
+            </div>
+            <div class="card">
+                <span class="material-icons icon-green">dns</span>
+                <div class="card-info">
+                    <span class="card-title">Vagas Livres:</span>
+                    <strong class="card-value" id="vagas-livres">45</strong>
+                </div>
+            </div>
+        </div>
+
+        <h2>MAPA DO ESTACIONAMENTO (Setor A)</h2>
+        <div class="mapa-container">
+            <div class="grid-vagas" id="grid-vagas">
+                </div>
+        </div>
+
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
